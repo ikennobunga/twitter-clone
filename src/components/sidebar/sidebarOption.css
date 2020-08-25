@@ -1,5 +1,7 @@
 .sidebarOption {
+  width: 10rem;
   display: flex;
+  margin-top: 1rem;
   align-items: center;
   cursor: pointer;
   color: #1C282C;
