@@ -1,9 +1,11 @@
 import React from 'react'
+import './widget.css'
+
 
 function Widget() {
   return (
-    <div>
-      
+    <div className="widget">
+      <h1>am a widget</h1>
     </div>
   )
 }
