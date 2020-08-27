@@ -1,11 +1,14 @@
 import React from 'react'
+import SearchOutlinedIcon from '@material-ui/icons/SearchOutlined';
 import './widget.css'
 
 
 function Widget() {
   return (
     <div className="widget">
-      <h1>am a widget</h1>
+      <div className="widget__input">
+        <SearchOutlinedIcon className="widget__searchIcon"/>
+      </div>
     </div>
   )
 }
