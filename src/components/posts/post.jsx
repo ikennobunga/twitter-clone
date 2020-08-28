@@ -9,26 +9,26 @@ import './post.css'
 
 
 
-function Post() {
+function Post({ displayName, username, verified, text, image, avatar }) {
   return (
     <div className="post">
       <div className="post__avatar">
-        <Avatar src={require(`../../assets/featured-image.jpg`)}/>
+        <Avatar src={avatar}/>
       </div>
       <div className="post__body">
         <div className="post__header">
           <div className="post__headertext">
-            <h3>Captain Morgan &nbsp;
+            <h3>{displayName} &nbsp;
               <span className="post__headerspecial">
-                <VerifiedUserIcon className="post__badge"/> @morgan
+                <VerifiedUserIcon className="post__badge"/> @{username}
               </span>
             </h3>
           </div>
           <div className="post__headerdescription">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing Quis voluptatem commodi modi in enim quasi.</p>
+            <p>{text}</p>
           </div>
         </div>
-        <img className="post__image" src={require(`../../assets/hannah-wei-84051-unsplash.jpg`)}/>
+        <img className="post__image" src={image}/>
         <div className="post__footer">
           <ChatBubbleOutlineOutlinedIcon fontSize="small"/>
           <RepeatIcon fontSize="small"/>

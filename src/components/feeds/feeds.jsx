@@ -11,7 +11,14 @@ function Feeds() {
         <h4>Home</h4>
       </div>
       <Tweetbox/>
-      <Post/>
+      <Post 
+        displayName={`Mr Zappa`} 
+        username={`@zappa`} 
+        verified={true} 
+        text={`yes its working`}
+        avatar={require(`src/assets/featured-image.jpg`)}
+        image={require(`src/assets/hannah-wei-84051-unsplash.jpg`)}
+      />
       <Post/>
       <Post/>
       <Post/>
