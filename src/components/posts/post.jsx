@@ -20,7 +20,8 @@ function Post({ displayName, username, verified, text, image, avatar }) {
           <div className="post__headertext">
             <h3>{displayName} &nbsp;
               <span className="post__headerspecial">
-                <VerifiedUserIcon className="post__badge"/> @{username}
+                {verified && <VerifiedUserIcon className="post__badge"/>} 
+                @{username}
               </span>
             </h3>
           </div>
