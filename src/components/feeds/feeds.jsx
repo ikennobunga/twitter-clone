@@ -1,8 +1,9 @@
 import React, {useState, useEffect} from 'react'
 import Tweetbox from '../tweetbox/tweetbox'
-import './feeds.css'
 import Post from '../posts/post'
 import db from '../../firebase.js'
+import FlipMove from 'react-flip-move'
+import './feeds.css'
 
 
 function Feeds() {
@@ -20,18 +21,21 @@ function Feeds() {
         <h4>Home</h4>
       </div>
       <Tweetbox/>
-      {
-        posts.map(post => (
-          <Post
-            displayName={post.displayName} 
-            username={post.username} 
-            verified={post.verified} 
-            text={post.text}
-            avatar={post.avatar}
-            image={post.image}
-          />
-        ))
-      }
+      <FlipMove>
+        {
+          posts.map(post => (
+            <Post
+              key={post.text}
+              displayName={post.displayName} 
+              username={post.username} 
+              verified={post.verified} 
+              text={post.text}
+              avatar={post.avatar}
+              image={post.image}
+            />
+          ))
+        }
+      </FlipMove>
     </div>
   )
 }

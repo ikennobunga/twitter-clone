@@ -14,6 +14,7 @@
 .post__body > img {
   width: 100%;
   height: 20rem;
+  object-fit: cover;
   border-radius: 1rem;
   -webkit-border-radius: 1rem;
   -moz-border-radius: 1rem;

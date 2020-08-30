@@ -4,7 +4,7 @@ import { Avatar, Button } from '@material-ui/core'
 import db from '../../firebase'
 
 
-function Tweetbox() {
+const Tweetbox = () => {
   const [tweetMessage, setTweetMessage] = useState(``)
   const [tweetImage, setTweetImage] = useState(``)
 
